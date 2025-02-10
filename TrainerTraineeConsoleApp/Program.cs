@@ -29,10 +29,32 @@
         public List<Trainee> Trainees { get; set; } = new List<Trainee>();
 
         public Course Course { get; set; }
-        public string GetOrganizationName() { return null; }
-        public int GetTraineesCount() { return 0; }
+        public string GetOrganizationName()
+        {
+            return Trainer.Organization.Name;
+        }
+        public int GetTraineesCount()
+        {
+            return Trainees.Count;
+        }
 
-        public int GetDuration() { return 0; }
+        public int GetDuration()
+        {
+            int totDuration = 0;
+
+            // for each module in a course
+            foreach (var module in Course.Modules)
+            {
+                // for each unit in module
+                foreach (var unit in module.Units)
+                {
+                    // ducation in a unit
+                    totDuration += unit.Duration;
+                }
+            }
+
+            return totDuration;
+        }
     }
     class Course
     {

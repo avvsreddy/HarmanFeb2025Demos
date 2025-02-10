@@ -42,7 +42,7 @@
     </ShowAsCollectionAssociation>
   </Class>
   <Class Name="TrainerTraineeConsoleApp.Training">
-    <Position X="5.75" Y="2" Width="1.5" />
+    <Position X="4.5" Y="2" Width="2.75" />
     <TypeIdentifier>
       <HashCode>AAAAAAAgAAAAAAAAAIAAAACAAACAIAAACAAAAAAAAAA=</HashCode>
       <FileName>Program.cs</FileName>
