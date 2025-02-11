@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrainerTraineeConsoleApp", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IDELangugesDemo", "IDELangugesDemo\IDELangugesDemo.csproj", "{B812D987-61AB-4D98-8F37-93A88EF8A0D0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExceptionsDemo1", "ExceptionsDemo1\ExceptionsDemo1.csproj", "{400A414E-A046-467D-9783-EC3D1D17BA5B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleMathClassLibrary", "SimpleMathClassLibrary\SimpleMathClassLibrary.csproj", "{05E9A70A-1A7D-4903-B797-45D05F1DABDA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{B812D987-61AB-4D98-8F37-93A88EF8A0D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B812D987-61AB-4D98-8F37-93A88EF8A0D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B812D987-61AB-4D98-8F37-93A88EF8A0D0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{400A414E-A046-467D-9783-EC3D1D17BA5B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{400A414E-A046-467D-9783-EC3D1D17BA5B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{400A414E-A046-467D-9783-EC3D1D17BA5B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{400A414E-A046-467D-9783-EC3D1D17BA5B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{05E9A70A-1A7D-4903-B797-45D05F1DABDA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{05E9A70A-1A7D-4903-B797-45D05F1DABDA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{05E9A70A-1A7D-4903-B797-45D05F1DABDA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{05E9A70A-1A7D-4903-B797-45D05F1DABDA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
