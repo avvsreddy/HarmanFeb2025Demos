@@ -11,6 +11,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExceptionsDemo1", "Exceptio
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleMathClassLibrary", "SimpleMathClassLibrary\SimpleMathClassLibrary.csproj", "{05E9A70A-1A7D-4903-B797-45D05F1DABDA}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Delegates", "Delegates", "{23CD95F6-6F38-40D3-A7FD-E5289D8FBF33}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DelegatesDemo1", "DelegatesDemo1\DelegatesDemo1.csproj", "{803554D1-E550-4FB6-99DE-55E87721989A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,8 +37,15 @@ Global
 		{05E9A70A-1A7D-4903-B797-45D05F1DABDA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{05E9A70A-1A7D-4903-B797-45D05F1DABDA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{05E9A70A-1A7D-4903-B797-45D05F1DABDA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{803554D1-E550-4FB6-99DE-55E87721989A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{803554D1-E550-4FB6-99DE-55E87721989A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{803554D1-E550-4FB6-99DE-55E87721989A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{803554D1-E550-4FB6-99DE-55E87721989A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{803554D1-E550-4FB6-99DE-55E87721989A} = {23CD95F6-6F38-40D3-A7FD-E5289D8FBF33}
 	EndGlobalSection
 EndGlobal
