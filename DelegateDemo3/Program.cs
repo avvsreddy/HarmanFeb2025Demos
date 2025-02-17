@@ -16,7 +16,7 @@
             //acc1.Subscribe(Notification.SendEmail);
 
             acc1.Deposit(10000); // tansaction
-            acc1.alert("Your account has been credited $99999999999999.99");
+            //acc1.alert("Your account has been credited $99999999999999.99");
             Console.WriteLine(acc1.Balance);
             //acc1.Withdraw(1000); // transaction
             Console.WriteLine(acc1.Balance);
