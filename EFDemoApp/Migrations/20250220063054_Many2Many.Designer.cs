@@ -3,6 +3,7 @@ using EFDemoApp.DataLayer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace EFDemoApp.Migrations
 {
     [DbContext(typeof(ProductsDbContext))]
-    partial class ProductsDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250220063054_Many2Many")]
+    partial class Many2Many
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -23,8 +26,6 @@ namespace EFDemoApp.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
-
-            modelBuilder.HasSequence("PersonSequence");
 
             modelBuilder.Entity("EFDemoApp.Entities.Category", b =>
                 {
@@ -45,38 +46,6 @@ namespace EFDemoApp.Migrations
                     b.HasKey("CategoryId");
 
                     b.ToTable("Categories");
-                });
-
-            modelBuilder.Entity("EFDemoApp.Entities.Person", b =>
-                {
-                    b.Property<int>("PersonId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasDefaultValueSql("NEXT VALUE FOR [PersonSequence]");
-
-                    SqlServerPropertyBuilderExtensions.UseSequence(b.Property<int>("PersonId"));
-
-                    b.Property<string>("City")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Email")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Mobile")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("PersonId");
-
-                    b.ToTable((string)null);
-
-                    b.UseTpcMappingStrategy();
                 });
 
             modelBuilder.Entity("EFDemoApp.Entities.Product", b =>
@@ -108,43 +77,55 @@ namespace EFDemoApp.Migrations
                     b.ToTable("Products");
                 });
 
-            modelBuilder.Entity("ProductSupplier", b =>
-                {
-                    b.Property<int>("ProductsProductId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("SuppliersPersonId")
-                        .HasColumnType("int");
-
-                    b.HasKey("ProductsProductId", "SuppliersPersonId");
-
-                    b.HasIndex("SuppliersPersonId");
-
-                    b.ToTable("ProductSupplier");
-                });
-
-            modelBuilder.Entity("EFDemoApp.Entities.Customer", b =>
-                {
-                    b.HasBaseType("EFDemoApp.Entities.Person");
-
-                    b.Property<int>("Discount")
-                        .HasColumnType("int");
-
-                    b.ToTable("Customers");
-                });
-
             modelBuilder.Entity("EFDemoApp.Entities.Supplier", b =>
                 {
-                    b.HasBaseType("EFDemoApp.Entities.Person");
+                    b.Property<int>("SupplierID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("SupplierID"));
+
+                    b.Property<string>("City")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("GST")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Mobile")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("Rating")
                         .HasColumnType("int");
 
+                    b.Property<string>("SupplierName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("SupplierID");
+
                     b.ToTable("Suppliers");
+                });
+
+            modelBuilder.Entity("ProductSupplier", b =>
+                {
+                    b.Property<int>("ProductsProductId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("SuppliersSupplierID")
+                        .HasColumnType("int");
+
+                    b.HasKey("ProductsProductId", "SuppliersSupplierID");
+
+                    b.HasIndex("SuppliersSupplierID");
+
+                    b.ToTable("ProductSupplier");
                 });
 
             modelBuilder.Entity("EFDemoApp.Entities.Product", b =>
@@ -168,7 +149,7 @@ namespace EFDemoApp.Migrations
 
                     b.HasOne("EFDemoApp.Entities.Supplier", null)
                         .WithMany()
-                        .HasForeignKey("SuppliersPersonId")
+                        .HasForeignKey("SuppliersSupplierID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
