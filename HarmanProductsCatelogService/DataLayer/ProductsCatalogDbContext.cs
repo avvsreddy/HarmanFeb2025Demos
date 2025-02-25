@@ -1,15 +1,16 @@
 ﻿using HarmanProductsCatelogService.Entities;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace HarmanProductsCatelogService.DataLayer
 {
-    public class ProductsCatalogDbContext : DbContext
+    public class ProductsCatalogDbContext : IdentityDbContext<IdentityUser> // DbContext
     {
         // map to database
 
-
-
-        public ProductsCatalogDbContext(DbContextOptions<ProductsCatalogDbContext> options) : base(options) { }
+        public ProductsCatalogDbContext(DbContextOptions<ProductsCatalogDbContext> options) : base(options)
+        { }
 
 
 
