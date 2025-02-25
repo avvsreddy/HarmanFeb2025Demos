@@ -1,0 +1,84 @@
+
+<h1 *ngIf='isPaid'>{{data}}</h1>
+
+<h2>in new angular </h2>
+
+@if(isPaid)
+{
+    <h1>{{data}}</h1>
+}
+
+<ul>
+    <li *ngFor="let article of articles">{{article}}</li>
+    
+</ul>
+
+
+<ul>
+@for (article of articles; track $index) 
+{
+    <li>{{article}}</li>
+}
+ 
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="container">
+  <div class="text-center">
+    <h1 class="display-4">Welcome to Knowledge Hub Portal</h1>
+    <p class="lead">Explore, Learn, and Share Your Knowledge</p>
+  </div>
+  <div class="row">
+    <div class="col-md-4">
+      <div class="card mb-4 shadow-sm">
+        <img src="assets/images/home/learn.jpg" alt="Learn" class="card-img-top">
+        <div class="card-body">
+          <h5 class="card-title">Learn from Experts</h5>
+          <p class="card-text">Gain insights from industry leaders and experts in various fields.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card mb-4 shadow-sm">
+        <img src="assets/images/home/share.jpg" alt="Share" class="card-img-top">
+        <div class="card-body">
+          <h5 class="card-title">Share Your Knowledge</h5>
+          <p class="card-text">Contribute to the community by sharing your experiences and knowledge.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card mb-4 shadow-sm">
+        <img src="assets/images/home/explore.jpg" alt="Explore" class="card-img-top">
+        <div class="card-body">
+          <h5 class="card-title">Explore New Ideas</h5>
+          <p class="card-text">Discover new concepts, technologies, and innovations in various domains.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<h1>Dynamic Data</h1>
+<hr>
+<h1> {{data}} </h1> -->
