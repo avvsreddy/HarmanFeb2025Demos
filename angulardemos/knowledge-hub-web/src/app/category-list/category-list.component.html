@@ -1,1 +1,15 @@
-<p>category-list works!</p>
+<div class="container">
+<h1>List of Categories</h1>
+<hr>
+
+<div class="row">
+    <div class="col-md-4 mb-2" *ngFor="let category of categoryList">
+        <div class="card" style="background-color: #f5f5f5;">
+            <div class="card-body">
+                <h5 class="card-title">{{category.Name}}</h5>
+                <p class="card-text">{{category.Description}}</p>
+            </div>
+        </div>
+    </div>
+</div>
+</div>

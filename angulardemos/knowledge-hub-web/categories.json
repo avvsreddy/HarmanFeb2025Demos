@@ -1,0 +1,39 @@
+{
+  "categories": [
+    {
+      "id": 1,
+      "Name": "Sports",
+      "Description": "Sports related articles"
+    },
+    {
+      "id": 2,
+      "Name": "Movies",
+      "Description": "Movies related articles"
+    },
+    {
+      "id": 3,
+      "Name": "Technology",
+      "Description": "Technology related articles"
+    },
+    {
+      "id": 4,
+      "Name": "Gen AI",
+      "Description": "Gen AI related articles"
+    },
+    {
+      "id": "fea1",
+      "Name": "Angular",
+      "Description": "Angular Articles"
+    },
+    {
+      "id": "dbf9",
+      "Name": "REST Services",
+      "Description": "RESTFull Services Articles"
+    },
+    {
+      "id": "2243",
+      "Name": "fdsfasdfasdf",
+      "Description": "dfsdfasdfasdf"
+    }
+  ]
+}
